@@ -1,4 +1,4 @@
-package main
+package iamgeutils
 
 import (
 	"fmt"
@@ -88,16 +88,16 @@ func main() {
 	quality := 100
 	numColours := 256
 	var err error
-	usage := fmt.Sprintf("Usage: %s <command> <options>", os.Args[0])
+	usage := fmt.Sprintf("Usage: %s <command> <options>\n", os.Args[0])
 	usage += fmt.Sprintf("Commands:\n")
-	usage += fmt.Sprintf("convert                     Converts an image to another format.")
+	usage += fmt.Sprintf("convert                     Converts an image to another format.\n")
 	usage += fmt.Sprintf("Options:\n")
-	usage += fmt.Sprintf("-i --infile <inputfile>     Specifies an input file.")
-	usage += fmt.Sprintf("-f --format <format>        Used with conversion commands. Used to specify a file format to convert to. Supported formats are png, jpeg, gif.")
-	usage += fmt.Sprintf("-q --quality <value>		  Used when converting to jpeg. Specifies conversion quality in the range 1..100 inclusive. Higher is better. Default is 100.")
-	usage += fmt.Sprintf("-n --num-colours <value>	  Used when converting to gif. Specifies the maximum number of colours used in the image in the range 1..256 inclusive. Default is 256.")
-	usage += fmt.Sprintf("-v --verbose                Verbose mode.")
-	usage += fmt.Sprintf("-h --help -?                Display this help information.")
+	usage += fmt.Sprintf("-i --infile <inputfile>     Specifies an input file.\n")
+	usage += fmt.Sprintf("-f --format <format>        Used with conversion commands. Used to specify a file format to convert to. Supported formats are png, jpeg, gif.\n")
+	usage += fmt.Sprintf("-q --quality <value>		  Used when converting to jpeg. Specifies conversion quality in the range 1..100 inclusive. Higher is better. Default is 100.\n")
+	usage += fmt.Sprintf("-n --num-colours <value>	  Used when converting to gif. Specifies the maximum number of colours used in the image in the range 1..256 inclusive. Default is 256.\n")
+	usage += fmt.Sprintf("-v --verbose                Verbose mode.\n")
+	usage += fmt.Sprintf("-h --help -?                Display this help information.\n")
 	if len(os.Args) < 2 {
 		fmt.Println(usage)
 		os.Exit(1)
